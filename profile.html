@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>User Profile</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">User Profile</h2>
+            <div id="profileDetails">
+                <!-- Display user profile details here -->
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Age:</strong> <span id="age"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+                <p><strong>Contact:</strong> <span id="contact"></span></p>
+            </div>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#updateProfileModal">Update Profile</button>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Modal for Profile Update -->
+<div class="modal fade" id="updateProfileModal" tabindex="-1" role="dialog" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateProfileModalLabel">Update Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add form for updating profile details here -->
+                <div class="form-group">
+                    <label for="updateAge">Age:</label>
+                    <input type="text" class="form-control" id="updateAge" placeholder="Enter your age">
+                </div>
+                <div class="form-group">
+                    <label for="updateDob">Date of Birth:</label>
+                    <input type="text" class="form-control" id="updateDob" placeholder="Enter your date of birth">
+                </div>
+                <div class="form-group">
+                    <label for="updateContact">Contact:</label>
+                    <input type="text" class="form-control" id="updateContact" placeholder="Enter your contact number">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveProfileChanges">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
